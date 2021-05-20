@@ -15,9 +15,9 @@
     "no-console": "off",
     "no-var": 2,
     "prefer-const": 2,
-    "prefer-template": 2,
+    // "prefer-template": 2,
     "prefer-spread": 2,
-    "prefer-arrow-callback": 2,
+    // "prefer-arrow-callback": 2,
     "no-constant-condition": 2,
     "no-dupe-args": 2
   }

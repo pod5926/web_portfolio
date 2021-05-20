@@ -1,9 +1,16 @@
 <% var title = "TOP"; var description = "トップのdescription"; %> <% include
 src/ejs/template/_head %>
+<div class="c-splash">
+  <div class="c-splash__text"></div>
+  <div class="loader_cover loader_cover--up"></div>
+  <div class="loader_cover loader_cover--down"></div>
+</div>
 
-<h1>トップページへようこそ！！</h1>
-<a href="/about">to about</a>
-<div class="p-home-bg"></div>
+<!-- <h1>トップページへようこそ！！</h1>
+<a href="/about">to about</a> -->
+<div class="p-home-bg">
+  <p class="p-home__title">日本を探そう</p>
+</div>
 <div class="p-home-grid"></div>
 
 <% include src/ejs/template/_footer %>
