@@ -43,3 +43,35 @@ bar.animate(1.0, function () {
   $('.loader_cover--down').addClass('coveranime');
   $(".c-splash").fadeOut();
 });
+
+
+$(window).on('load', () => {
+
+  // fadeTitle-view
+  $('.js-fadeTitle-view').children().addBack().contents().each(function() {
+    $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
+  });
+
+  $('.text-move').slice(1,3).addClass('text--small');
+
+  setTimeout(() =>{
+      $('.js-fadeTitle-view').addClass("is-active");
+  }, 900);
+
+  // // fadeTitle
+  // $('.js-fadeTitle').children().addBack().contents().each(function() {
+  //   $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
+  // });
+
+  // setTimeout(() =>{
+  //     $('.js-fadeTitle').addClass("is-active");
+  // }, 1100);
+
+  // // scrollin
+  // setTimeout(() => {
+  //   $('.c-block__line').addClass('scrollin');
+  //   $('.fadein-up').addClass('scrollin');
+  // }, 1500);
+
+});
+

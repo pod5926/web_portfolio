@@ -1,0 +1,24 @@
+.c-header {
+  width: 230px;
+  height: 100vh;
+  padding: 100px 0 0 0;
+  display: flex;
+  justify-content: center;
+  background-color: $colorAinezu;
+  z-index: 1;
+  &__title {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    writing-mode: vertical-lr;
+  }
+  &__sns {
+    position: absolute;
+    // left: 45px;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    &-icon {
+      width: 50px;
+    }
+  }
+}
