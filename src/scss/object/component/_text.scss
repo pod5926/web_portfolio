@@ -8,7 +8,7 @@
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
           transition: opacity 1.5s ease-in #{0.3 * $i}s,
-            transform 1.2s ease #{0.2 * $i}s;
+            transform 2s ease #{0.2 * $i}s;
         }
       }
     }

@@ -1,0 +1,22 @@
+.p-food {
+  height: 900px;
+  &__list {
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.5;
+    &-img {
+      object-fit: cover;
+      height: 100%;
+      width: 50%;
+      border: 1px solid $colorBlack;
+    }
+    &:hover {
+      transition: all 0.8s;
+      opacity: 1;
+    }
+  }
+  & > :nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+}

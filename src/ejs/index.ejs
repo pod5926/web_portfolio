@@ -1,22 +1,17 @@
 <% var title = "TOP"; var description = "トップのdescription"; %> <% include
-src/ejs/template/_head %>
-<div class="c-splash">
-  <div class="c-splash__text"></div>
-  <div class="loader_cover loader_cover--up"></div>
-  <div class="loader_cover loader_cover--down"></div>
-</div>
-
-<% sns = [ {title: 'twitter',link: '#'}, {title: 'facebook',link: '#'}, {title:
-'github',link: '#'}, ]; %>
+src/ejs/template/_head %> <% sns = [ {title: 'twitter',link: '#'}, {title:
+'facebook',link: '#'}, {title: 'github',link: '#'}, ]; foodList = [{
+title:'sashimi',text:'aaa' }, {title:'sushi',text:'aaa' },{
+title:'tenpura',text:'aaa' }] %>
 
 <header class="c-header">
   <h1 class="c-header__title">コバヤシショウゴのポートフォリオ</h1>
-  <ul class="c-header__sns">
+  <ul class="c-header__snsList">
     <% sns.forEach(function(item){ %>
     <a href="<%= item.link %> ">
       <li>
         <img
-          class="c-header__sns-icon"
+          class="c-header__snsList-icon"
           src="./assets/images/icons/<%= item.title %>.svg"
           alt="<%= item.title %> "
         />
@@ -26,13 +21,46 @@ src/ejs/template/_head %>
   </ul>
 </header>
 
-<!-- <h1>トップページへようこそ！！</h1>
-<a href="/about">to about</a> -->
-<div class="p-home">
-  <p class="p-home__title font-Logotype js-fadeTitle-view">旅する日本</p>
+<div class="l-content">
+  <div class="p-home">
+    <p class="p-home__title font-Logotype js-fadeTitle-view">旅する日本</p>
+  </div>
+  <main class="p-main">
+    <section class="p-point">
+      <p>魅力？</p>
+    </section>
+    <section class="p-point">
+      <p>魅力？</p>
+    </section>
+    <section class="p-point">
+      <p>魅力？</p>
+    </section>
+    <section class="p-point">
+      <p>魅力？</p>
+    </section>
+    <section class="p-point">
+      <p>魅力？</p>
+    </section>
+
+    <section class="p-food">
+      <% foodList.forEach(function(item) { %>
+      <section class="p-food__list">
+        <img
+          class="p-food__list-img"
+          src="./assets/images/<%= item.title %>.jpg"
+          alt="<%= item.title %> "
+        />
+        <div>
+          <p>aaa</p>
+        </div>
+      </section>
+      <% }) %>
+    </section>
+
+    <section class="p-point">
+      <p>魅力？</p>
+    </section>
+  </main>
 </div>
 
-<div class="p-point">
-  <p>魅力？</p>
-</div>
 <% include src/ejs/template/_footer %>

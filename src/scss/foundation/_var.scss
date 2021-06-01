@@ -8,6 +8,7 @@ $breakpoints: (
     'print, screen and (max-width: #{$breakPC}px) and (min-width: #{$breakSP + 1}px)',
   'o-pc': 'print, screen and (min-width: #{$breakPC + 1}px)',
 ) !default;
+
 @mixin mq($breakpoint) {
   @media #{inspect(map-get($breakpoints, $breakpoint))} {
     @content;
@@ -33,3 +34,6 @@ $colorBlack: #222;
 $colorGray: #666;
 $colorWhite: #fff;
 $colorAinezu: #5e7184;
+$colorShironeri: #f3f3f2;
+$colorShirahana: #e8ecef;
+$colorKon: #223a70;
