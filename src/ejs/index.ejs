@@ -1,8 +1,10 @@
 <% var title = "TOP"; var description = "トップのdescription"; %> <% include
 src/ejs/template/_head %> <% sns = [ {title: 'twitter',link: '#'}, {title:
 'facebook',link: '#'}, {title: 'github',link: '#'}, ]; foodList = [{
-title:'sashimi',text:'aaa' }, {title:'sushi',text:'aaa' },{
-title:'tenpura',text:'aaa' }] %>
+img:'sashimi',title:'刺身',text:'素材そのものを味わう料理\n味の良い旬の素材を堪能'
+}, {img:'sushi',title:'寿司',text:'新鮮な魚介を酢飯とともに' },{
+img:'tenpura',title:'天麩羅',text:'海の幸、山の幸\n素材の味に舌つづみしてください。'
+}] %>
 
 <header class="c-header">
   <h1 class="c-header__title">コバヤシショウゴのポートフォリオ</h1>
@@ -44,16 +46,21 @@ title:'tenpura',text:'aaa' }] %>
 
     <section class="p-food">
       <% foodList.forEach(function(item) { %>
-      <section class="p-food__list">
+      <div class="p-food__menu">
         <img
-          class="p-food__list-img"
-          src="./assets/images/<%= item.title %>.jpg"
+          class="p-food__menu-img"
+          src="./assets/images/<%= item.img %>.jpg"
           alt="<%= item.title %> "
         />
-        <div>
-          <p>aaa</p>
+        <div class="p-food__menu-content">
+          <div>
+            <h3 class="font-Haresora p-food__menu-content-title">
+              <%= item.title %>
+            </h3>
+            <p class="p-food__menu-content-text"><%= item.text %></p>
+          </div>
         </div>
-      </section>
+      </div>
       <% }) %>
     </section>
 

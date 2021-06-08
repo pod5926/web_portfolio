@@ -1,21 +1,48 @@
 .p-food {
   height: 900px;
-  &__list {
+
+  &__menu {
     height: 300px;
     display: flex;
     justify-content: space-between;
-    opacity: 0.5;
+
+    &:nth-of-type(n + 2) {
+      opacity: 0.5;
+    }
+
+    &-content {
+      width: 50%;
+      writing-mode: vertical-rl;
+      color: $colorKon;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-title {
+        margin-left: 1em;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      &-text {
+        height: 13em;
+        line-height: 3;
+      }
+    }
+
     &-img {
       object-fit: cover;
       height: 100%;
       width: 50%;
       border: 1px solid $colorBlack;
     }
+
     &:hover {
       transition: all 0.8s;
       opacity: 1;
     }
   }
+
   & > :nth-of-type(2n) {
     flex-direction: row-reverse;
   }

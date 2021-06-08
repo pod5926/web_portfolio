@@ -18,6 +18,16 @@
   src: url('#{$fontPath}ロゴたいぷゴシックCondense.otf');
 }
 
+@font-face {
+  font-family: 'Haresora';
+  src: url('#{$fontPath}Harenosora.otf');
+}
+
+@font-face {
+  font-family: 'XANO';
+  src: url('#{$fontPath}XANO-mincho.ttf');
+}
+
 .font-Corporate {
   font-family: Corporate;
 }
@@ -27,6 +37,14 @@
 
 .font-Logotype {
   font-family: Logotype;
+}
+
+.font-Haresora {
+  font-family: Haresora;
+}
+
+.font-XANO {
+  font-family: XANO;
 }
 
 body {

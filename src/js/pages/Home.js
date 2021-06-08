@@ -48,14 +48,14 @@ bar.animate(1.0, function () {
 $(window).on('load', () => {
 
   // fadeTitle-view
-  $('.js-fadeTitle-view').children().addBack().contents().each(function() {
+  $('.js-fadeTitle-view').children().addBack().contents().each(function () {
     $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
   });
 
-  $('.text-move').slice(1,3).addClass('text--small');
+  $('.text-move').slice(1, 3).addClass('text--small');
 
-  setTimeout(() =>{
-      $('.js-fadeTitle-view').addClass("is-active");
+  setTimeout(() => {
+    $('.js-fadeTitle-view').addClass("is-active");
   }, 900);
 
   // // fadeTitle
@@ -73,5 +73,18 @@ $(window).on('load', () => {
   //   $('.fadein-up').addClass('scrollin');
   // }, 1500);
 
+
+  // 文字列変換
+  // const sab = $('.p-food__menu-content-text');
+  // sab.html(sab.text().replace(/\n/g, "<br>"));
+
+
+
+  $('.p-food__menu-content-text').each(function () {
+    const txt = $(this).html();
+    $(this).html(
+      txt.replace(/\n/g,'<br>')
+    );
+  })
 });
 
