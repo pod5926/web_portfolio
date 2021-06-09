@@ -1,5 +1,6 @@
 import $ from 'jquery'
-import ProgressBar from'progressbar.js'
+import ProgressBar from 'progressbar.js'
+import {moveSlide} from '../modules/Slider';
 
 export default class Home {
   constructor() {
@@ -44,7 +45,6 @@ bar.animate(1.0, function () {
   $(".c-splash").fadeOut();
 });
 
-
 $(window).on('load', () => {
 
   // fadeTitle-view
@@ -88,3 +88,4 @@ $(window).on('load', () => {
   })
 });
 
+moveSlide();
