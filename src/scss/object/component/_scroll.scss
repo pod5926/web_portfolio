@@ -2,9 +2,10 @@
   // 描画位置
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 0px;
   // 高さ
   height: 100px;
+  z-index: 1;
 
   // 線
   &::after {
@@ -15,10 +16,11 @@
     // 形状
     width: 1px;
     height: 100px;
-    background: #000;
-    // 線の動き1.4秒かけて動く。永遠にループ
+    background: $colorWhite;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
     animation: pathmove 2.4s ease-in-out infinite;
     opacity: 0;
+    z-index: 0;
   }
 
   &--arrow {
@@ -71,7 +73,7 @@
 @keyframes pathmove {
   0% {
     height: 0;
-    top: 0;
+    top: 0px;
     opacity: 0;
   }
   30% {

@@ -56,30 +56,10 @@ $(window).on('load', () => {
 
   setTimeout(() => {
     $('.js-fadeTitle-view').addClass("is-active");
+
   }, 900);
 
-  // // fadeTitle
-  // $('.js-fadeTitle').children().addBack().contents().each(function() {
-  //   $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
-  // });
-
-  // setTimeout(() =>{
-  //     $('.js-fadeTitle').addClass("is-active");
-  // }, 1100);
-
-  // // scrollin
-  // setTimeout(() => {
-  //   $('.c-block__line').addClass('scrollin');
-  //   $('.fadein-up').addClass('scrollin');
-  // }, 1500);
-
-
   // 文字列変換
-  // const sab = $('.p-food__menu-content-text');
-  // sab.html(sab.text().replace(/\n/g, "<br>"));
-
-
-
   $('.p-food__menu-content-text').each(function () {
     const txt = $(this).html();
     $(this).html(

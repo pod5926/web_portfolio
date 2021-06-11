@@ -4,7 +4,8 @@ src/ejs/template/_head %> <% sns = [ {title: 'twitter',link: '#'}, {title:
 img:'sashimi',title:'刺身',text:'素材そのものを味わう料理\n味の良い旬の素材を堪能'
 }, {img:'sushi',title:'寿司',text:'新鮮な魚介を酢飯とともに' },{
 img:'tenpura',title:'天麩羅',text:'海の幸、山の幸\n素材の味に舌つづみしてください。'
-}] %>
+}]; slider= [{ title:'spring',alt:'春' },{ title:'summer',alt:'夏' },{
+title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
 
 <header class="c-header">
   <h1 class="c-header__title">コバヤシショウゴのポートフォリオ</h1>
@@ -26,44 +27,33 @@ img:'tenpura',title:'天麩羅',text:'海の幸、山の幸\n素材の味に舌�
 <div class="l-content">
   <div class="p-home">
     <p class="p-home__title font-Logotype js-fadeTitle-view">旅する日本</p>
+    <div class="c-scrollDown"></div>
   </div>
-  <main class="p-main">
-    <section class="p-point">
-      <p>魅力？</p>
-      <div class="c-scrollDown--arrow"></div>
-      <!-- <div class="c-scrollDown"></div> -->
-    </section>
 
-    <section class="p-point">
-      <p>魅力？</p>
-    </section>
+  <main class="p-main">
     <section class="p-point">
       <p>魅力？</p>
     </section>
 
     <section class="p-slider">
       <ul class="slider">
+        <% slider.forEach(function(item) { %>
         <li class="slider-item">
-          <img class="" src="./assets/images/hanabi.jpg" alt="" />
+          <img
+            src="./assets/images/<%= item.title %>.jpg"
+            alt="<%= item.alt %> "
+          />
         </li>
-        <li class="slider-item">
-          <img class="" src="./assets/images/yado.jpg" alt="" />
-        </li>
-        <li class="slider-item">
-          <img class="" src="./assets/images/torii.jpg" alt="" />
-        </li>
-        <li class="slider-item">
-          <img class="" src="./assets/images/hanabi.jpg" alt="" />
-        </li>
+        <% }) %>
       </ul>
-      <!-- <div class="slider">
-        <div><img src="https://placehold.jp/1000x250.png" alt="slide1" /></div>
-        <div><img src="https://placehold.jp/1000x250.png" alt="slide2" /></div>
-        <div><img src="https://placehold.jp/1000x250.png" alt="slide3" /></div>
-      </div> -->
+      <div class="c-scrollDown"></div>
     </section>
 
     <section class="p-food">
+      <div class="c-heading">
+        <h2>てすと</h2>
+      </div>
+
       <% foodList.forEach(function(item) { %>
       <div class="p-food__menu">
         <img
@@ -81,9 +71,13 @@ img:'tenpura',title:'天麩羅',text:'海の幸、山の幸\n素材の味に舌�
         </div>
       </div>
       <% }) %>
+      <div class="c-scrollDown"></div>
     </section>
 
     <section class="p-contact">
+      <div class="c-heading">
+        <h2>てすと</h2>
+      </div>
       <div class="p-contact__box">
         <p>お問い合わせ</p>
       </div>

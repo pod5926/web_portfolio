@@ -1,13 +1,13 @@
 .p-food {
-  margin-top: 100px;
-  height: 900px;
+  position: relative;
+  // margin-bottom: 60px;
 
   &__menu {
     height: 300px;
     display: flex;
     justify-content: space-between;
 
-    &:nth-of-type(n + 2) {
+    &:nth-of-type(n + 3) {
       opacity: 0.5;
     }
 
