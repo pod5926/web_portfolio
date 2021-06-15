@@ -4,6 +4,7 @@
     display: inline-block;
     transform: translate(0, 150px);
     letter-spacing: 0.3rem;
+
     .p-home__title & {
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
@@ -12,6 +13,7 @@
         }
       }
     }
+
     .p-history__title & {
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {

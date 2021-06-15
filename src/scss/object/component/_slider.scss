@@ -6,11 +6,11 @@
   position: relative;
   z-index: 1;
   /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
-  height: 80vh; /*スライダー全体の縦幅を90vhにする*/
+  height: 90vh; /*スライダー全体の縦幅を90vhにする*/
 
   &-item {
     width: 100%; /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
-    height: 80vh; /*各スライダー全体の縦幅を90vhにする*/
+    height: 90vh; /*各スライダー全体の縦幅を90vhにする*/
     padding: 16px;
 
     & > img {
