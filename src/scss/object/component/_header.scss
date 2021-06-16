@@ -6,21 +6,24 @@
   justify-content: center;
   background-color: $colorShironeri;
   z-index: 1;
+
   &__title {
     font-size: 1.5rem;
     font-weight: bold;
-    letter-spacing: 0.2rem;
-    writing-mode: vertical-lr;
-    color: $colorKon;
+    letter-spacing: 0.1rem;
+    writing-mode: vertical-rl;
   }
+
   &__snsList {
     position: absolute;
-    // left: 45px;
     bottom: 30px;
     display: flex;
     justify-content: space-between;
-    &-icon {
-      width: 50px;
+
+    &__item {
+      & > a > img {
+        width: 50px;
+      }
     }
   }
 }

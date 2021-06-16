@@ -1,7 +1,53 @@
 .p-contact {
   position: relative;
 
+  &__bg {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background: url('#{$bgPath}yado.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  &__area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto 100px auto;
+    background: $colorWhite;
+    box-shadow: 0 4px 4px $colorGray;
+    width: 90%;
+  }
+
+  &__map {
+    width: 50%;
+    height: 50vh;
+    background: $colorKon;
+  }
+
+  &__textBlock {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   &__box {
-    background-color: black;
+    & > h3 {
+      font-size: 1.2rem;
+      margin: 0 0 20px 0;
+    }
+
+    & > p {
+      margin: 0 0 20px 0;
+    }
+
+    & > a {
+      padding: 8px 30px;
+      border: 1px solid $colorBlack;
+      font-size: 0.9rem;
+    }
   }
 }

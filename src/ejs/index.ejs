@@ -1,25 +1,28 @@
 <% var title = "TOP"; var description = "トップのdescription"; %> <% include
 src/ejs/template/_head %> <% sns = [ {title: 'twitter',link: '#'}, {title:
 'facebook',link: '#'}, {title: 'github',link: '#'}, ]; foodList = [{
-img:'sashimi',title:'刺身',text:'素材そのものを味わう料理\n味の良い旬の素材を堪能'
-}, {img:'sushi',title:'寿司',text:'新鮮な魚介を酢飯とともに' },{
-img:'tenpura',title:'天麩羅',text:'海の幸、山の幸\n素材の味に舌つづみしてください。'
+img:'sashimi',title:'刺身',text:'刺身は魚介類などの食品そのものを味わう料理であり、新鮮で味の良い旬の味を楽しむことができます。'
+},
+{img:'sushi',title:'寿司',text:'米飯と主に魚介類を組み合わせた日本料理\n海外でも「sushi」で通じます。'
+},{
+img:'tenpura',title:'天麩羅',text:'魚介類や野菜等の食材を、鶏卵と溶き汁、小麦粉にあわせ、衣とし、油で揚げて調理する日本料理です。'
 }]; slider= [{ title:'spring',alt:'春' },{ title:'summer',alt:'夏' },{
 title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
 
 <header class="c-header">
-  <h1 class="c-header__title">コバヤシショウゴのポートフォリオ</h1>
+  <h1 class="c-header__title">
+    コバヤシショウゴ<span class="u-mb-10"></span>ポートフォリオ
+  </h1>
   <ul class="c-header__snsList">
     <% sns.forEach(function(item){ %>
-    <a href="<%= item.link %> ">
-      <li>
+    <li class="c-header__snsList__item">
+      <a href="<%= item.link %> ">
         <img
-          class="c-header__snsList-icon"
           src="./assets/images/icons/<%= item.title %>.svg"
           alt="<%= item.title %> "
         />
-      </li>
-    </a>
+      </a>
+    </li>
     <% }) %>
   </ul>
 </header>
@@ -46,40 +49,66 @@ title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
         </li>
         <% }) %>
       </ul>
-      <div class="c-scrollDown"></div>
     </section>
 
     <section class="p-food">
+      <div class="p-food__bg">
+        <div class="c-scrollDown"></div>
+      </div>
       <div class="c-heading">
-        <h2 class="font-Logotype blur-Trigger">日本食</h2>
+        <h2 class="font-Logotype blur-Trigger c-heading__title">日本の食</h2>
       </div>
 
-      <% foodList.forEach(function(item) { %>
-      <div class="p-food__menu">
-        <img
-          class="p-food__menu-img"
-          src="./assets/images/<%= item.img %>.jpg"
-          alt="<%= item.title %> "
-        />
-        <div class="p-food__menu-content">
-          <div>
-            <h3 class="font-Haresora p-food__menu-content-title">
-              <%= item.title %>
-            </h3>
-            <p class="p-food__menu-content-text"><%= item.text %></p>
+      <ul class="p-food__list">
+        <% foodList.forEach(function(item) { %>
+        <li>
+          <img
+            class="p-food__list__img"
+            src="./assets/images/<%= item.img %>.jpg"
+            alt="<%= item.title %> "
+          />
+          <div class="p-food__list__descript">
+            <div class="blur-Trigger">
+              <h3 class="font-Haresora p-food__list__title">
+                <%= item.title %>
+              </h3>
+              <p class="p-food__list__text"><%= item.text %></p>
+            </div>
           </div>
-        </div>
-      </div>
-      <% }) %>
-      <div class="c-scrollDown"></div>
+        </li>
+        <% }) %>
+      </ul>
     </section>
 
     <section class="p-contact">
+      <div class="p-contact__bg">
+        <div class="c-scrollDown"></div>
+      </div>
       <div class="c-heading">
         <h2 class="blur-Trigger">コンタクト</h2>
       </div>
-      <div class="p-contact__box">
-        <p>コンタクト</p>
+      <div class="p-contact__area">
+        <div class="p-contact__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1620.6061811156874!2d139.7685028330658!3d35.671772668839715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x14ff2622524b84c5!2z44Op44Km44Oz44OJ44Kv44Ot44K5IOmKgOW6p--8kuS4geebrg!5e0!3m2!1sja!2sjp!4v1617946966248!5m2!1sja!2sjp"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            class="googleMap"
+          ></iframe>
+        </div>
+        <div class="p-contact__textBlock blur-Trigger">
+          <div class="p-contact__box">
+            <h3>株式会社cleanstyle</h3>
+            <p>
+              〒104-0061 <br />東京都中央区銀座2丁目11
+              <br />銀座線銀座駅A13番出口から徒歩3分
+            </p>
+            <a href="#" class="p-contact__link"> GoogleMapで見る </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
