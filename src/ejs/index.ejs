@@ -9,22 +9,24 @@ img:'tenpura',title:'天麩羅',text:'魚介類や野菜等の食材を、鶏卵
 }]; slider= [{ title:'spring',alt:'春' },{ title:'summer',alt:'夏' },{
 title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
 
-<header class="c-header">
-  <h1 class="c-header__title">
-    コバヤシショウゴ<span class="u-mb-10"></span>ポートフォリオ
-  </h1>
-  <ul class="c-header__snsList">
-    <% sns.forEach(function(item){ %>
-    <li class="c-header__snsList__item">
-      <a href="<%= item.link %> ">
-        <img
-          src="./assets/images/icons/<%= item.title %>.svg"
-          alt="<%= item.title %> "
-        />
-      </a>
-    </li>
-    <% }) %>
-  </ul>
+<header class="l-header">
+  <div class="p-header">
+    <h1 class="p-header__title">
+      コバヤシショウゴ<span class="u-mb-10"></span>ポートフォリオ
+    </h1>
+    <ul class="p-header__snsList">
+      <% sns.forEach(function(item){ %>
+      <li class="p-header__snsList__item">
+        <a href="<%= item.link %> ">
+          <img
+            src="./assets/images/icons/<%= item.title %>.svg"
+            alt="<%= item.title %> "
+          />
+        </a>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
 </header>
 
 <div class="l-content">

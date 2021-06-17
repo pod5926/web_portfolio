@@ -1,3 +1,28 @@
+  <% sns = [ {title: 'twitter',link: '#'}, {title:
+'facebook',link: '#'}, {title: 'github',link: '#'}, ]; %>
+  <footer class="l-footer">
+    <div class="p-footer blur-Trigger">
+      <div class="p-footer__area">
+        <h3 class="p-footer__title">コバヤシ<br><span class="u-mr-50"></span>ショウゴ</h3>
+        <h3 class="p-footer__title font-XANO">株式会社cleanstyle</h3>
+        <ul class="p-footer__snsList">
+          <% sns.forEach(function(item){ %>
+          <li>
+            <a href="#">
+              <img
+                src="./assets/images/icons/<%= item.title %>.svg"
+                alt="<%= item.title %> "
+              />
+              <p>
+              <%= item.title %>
+              </p>
+            </a>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </div><!-- l-wrap -->
 </body>
 </html>
