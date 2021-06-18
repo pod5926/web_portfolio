@@ -1,27 +1,25 @@
 .p-header {
+  display: flex;
+  justify-content: center;
   position: relative;
   padding: 100px 0 0 0;
   height: 100vh;
-  display: flex;
-  justify-content: center;
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     writing-mode: vertical-rl;
   }
 
   &__snsList {
-    position: absolute;
-    bottom: 30px;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    bottom: 30px;
+  }
 
-    &__item {
-      & > a > img {
-        width: 50px;
-      }
-    }
+  &__img {
+    width: 50px;
   }
 }

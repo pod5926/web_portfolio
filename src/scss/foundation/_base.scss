@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  font-size: 62.5%; // 「1rem = 10px」にするために記述する
+}
+
 // デバッグ用
 // body * {
 //   outline: 1px dotted rgba(255,0,0,0.2) !important;
@@ -27,3 +31,40 @@ a {
 // body * * * * {
 //   outline: 1px dotted rgba(0,0,255,0.2) !important;
 // } /* blue */
+
+body {
+  &.appear .c-splash-bg {
+    display: block;
+    content: '';
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: #223a70; /*伸びる背景色の設定*/
+    animation-name: PageAnime;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes PageAnime {
+  0% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+  50% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  50.001% {
+    transform-origin: left;
+  }
+  100% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}

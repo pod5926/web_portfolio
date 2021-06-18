@@ -1,4 +1,6 @@
 .l-wrap {
+  opacity: 0; /*はじめは透過0に*/
+
   padding-left: 200px;
   background-color: $colorShirahana;
   color: $colorKon;
@@ -6,4 +8,22 @@
   letter-spacing: 0.1em;
   overflow: hidden;
   word-break: break-word;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .l-wrap {
+  animation-name: PageAnimeAppear;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

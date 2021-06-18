@@ -12,13 +12,14 @@ title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
 <header class="l-header">
   <div class="p-header">
     <h1 class="p-header__title">
-      コバヤシショウゴ<span class="u-mb-10"></span>ポートフォリオ
+      コバヤシショウゴ<span class="u-mb-20"></span>ポートフォリオ
     </h1>
     <ul class="p-header__snsList">
       <% sns.forEach(function(item){ %>
-      <li class="p-header__snsList__item">
+      <li>
         <a href="<%= item.link %> ">
           <img
+            class="p-header__img"
             src="./assets/images/icons/<%= item.title %>.svg"
             alt="<%= item.title %> "
           />
@@ -30,8 +31,8 @@ title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
 </header>
 
 <div class="l-content">
-  <div class="p-home">
-    <p class="p-home__title font-Logotype js-fadeTitle-view">旅する日本</p>
+  <div class="p-top">
+    <p class="p-top__title font-Logotype js-fadeTitle-view">旅する日本</p>
     <div class="c-scrollDown"></div>
   </div>
 
@@ -58,23 +59,21 @@ title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
         <div class="c-scrollDown"></div>
       </div>
       <div class="c-heading">
-        <h2 class="font-Logotype blur-Trigger c-heading__title">日本の食</h2>
+        <h2 class="font-Logotype js-blur c-heading__title">日本の食</h2>
       </div>
 
       <ul class="p-food__list">
         <% foodList.forEach(function(item) { %>
         <li>
           <img
-            class="p-food__list__img"
+            class="p-food__img"
             src="./assets/images/<%= item.img %>.jpg"
             alt="<%= item.title %> "
           />
-          <div class="p-food__list__descript">
-            <div class="blur-Trigger">
-              <h3 class="font-Haresora p-food__list__title">
-                <%= item.title %>
-              </h3>
-              <p class="p-food__list__text"><%= item.text %></p>
+          <div class="p-food__content">
+            <div class="js-blur">
+              <h3 class="font-Haresora p-food__title"><%= item.title %></h3>
+              <p class="p-food__text"><%= item.text %></p>
             </div>
           </div>
         </li>
@@ -87,7 +86,7 @@ title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
         <div class="c-scrollDown"></div>
       </div>
       <div class="c-heading">
-        <h2 class="blur-Trigger">コンタクト</h2>
+        <h2 class="js-blur">コンタクト</h2>
       </div>
       <div class="p-contact__area">
         <div class="p-contact__map">
@@ -101,10 +100,10 @@ title:'autumn',alt:'秋' },{ title:'winter',alt:'冬' },] %>
             class="googleMap"
           ></iframe>
         </div>
-        <div class="p-contact__textBlock blur-Trigger">
-          <div class="p-contact__box">
-            <h3>株式会社cleanstyle</h3>
-            <p>
+        <div class="p-contact__textBlock js-blur">
+          <div>
+            <h3 class="p-contact__title">株式会社cleanstyle</h3>
+            <p class="p-contact__address">
               〒104-0061 <br />東京都中央区銀座2丁目11
               <br />銀座線銀座駅A13番出口から徒歩3分
             </p>

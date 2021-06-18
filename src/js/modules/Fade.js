@@ -3,14 +3,14 @@ import $ from 'jquery'
 export function fadeAnime(){
 	// じわっ（ぼかしから出現）
 
-	$('.blur-Trigger').each(function(){ //blurTriggerというクラス名が
+	$('.js-blur').each(function(){ //blurTriggerというクラス名が
 		const elemPos = $(this).offset().top-20;//要素より、50px上の
 		const scroll = $(window).scrollTop();
 		const windowHeight = $(window).height();
 		if (scroll >= elemPos - windowHeight){
-      $(this).addClass('blur');// 画面内に入ったらblurというクラス名を追記
+      $(this).addClass('is-active');// 画面内に入ったらis-activeというクラス名を追記
 		}else{
-      $(this).removeClass('blur');// 画面外に出たらblurというクラス名を外す
+      $(this).removeClass('is-active');// 画面外に出たらis-activeというクラス名を外す
 		}
 		});
 

@@ -1,10 +1,10 @@
-.blur {
-  animation-name: blurAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.js-blur {
+  opacity: 0;
 
-  &-Trigger {
-    opacity: 0;
+  &.is-active {
+    animation-name: blurAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
 }
 

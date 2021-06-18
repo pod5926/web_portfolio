@@ -4,24 +4,6 @@
     display: inline-block;
     transform: translate(0, 150px);
     letter-spacing: 0.3rem;
-
-    .p-home__title & {
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          transition: opacity 1.5s ease-in #{0.3 * $i}s,
-            transform 2s ease #{0.2 * $i}s;
-        }
-      }
-    }
-
-    .p-history__title & {
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          transition: opacity 0.5s ease #{0.1 * $i}s,
-            transform 0.3s ease #{0.1 * $i}s;
-        }
-      }
-    }
   }
 
   &--small {
