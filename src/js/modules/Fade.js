@@ -13,20 +13,6 @@ export function fadeAnime(){
       $(this).removeClass('is-active');// 画面外に出たらis-activeというクラス名を外す
 		}
 		});
-
-    //4-8 スーッ（枠線が伸びて出現）
-
-    $('.lineTrigger').each(function(){ //lineTriggerというクラス名が
-		const elemPos = $(this).offset().top-50;//要素より、50px上の
-		const scroll = $(window).scrollTop();
-		const windowHeight = $(window).height();
-		if (scroll >= elemPos - windowHeight){
-			$(this).addClass('lineanime');// 画面内に入ったらlineanimeというクラス名を追記
-		}else{
-			$(this).removeClass('lineanime');// 画面外に出たらlineanimeというクラス名を外す
-		}
-	});
-
 }
 
 export function fadeTitle(){
@@ -40,5 +26,5 @@ export function fadeTitle(){
   setTimeout(() => {
     $('.js-fadeTitle-view').addClass("is-active");
 
-  }, 900);
+  }, 500);
 }

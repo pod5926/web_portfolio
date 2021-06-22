@@ -9,14 +9,9 @@
   &--small {
     font-size: 5rem;
     letter-spacing: 0.1rem;
-  }
-}
 
-@media screen and (max-width: 640px) {
-  .wrap {
-    width: 100%;
-  }
-  .text-move {
-    font-size: 30px;
+    @include mq {
+      font-size: 3rem;
+    }
   }
 }

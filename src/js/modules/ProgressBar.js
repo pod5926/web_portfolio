@@ -2,7 +2,7 @@ import ProgressBar from 'progressbar.js'
 // barつき  分割
 export function progressbar() {
 
-const bar = new ProgressBar.Circle('.c-splash__text', {
+const bar = new ProgressBar.Circle('.c-splash__circle', {
   color: '#aaa',
   strokeWidth: 4,
   trailWidth: 1,

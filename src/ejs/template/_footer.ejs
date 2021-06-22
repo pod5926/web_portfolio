@@ -3,23 +3,27 @@
   <footer class="l-footer">
     <div class="p-footer js-blur">
       <div class="p-footer__area">
-        <h3 class="p-footer__title">コバヤシ<br><span class="u-mr-50"></span>ショウゴ</h3>
-        <h3 class="p-footer__title font-XANO">株式会社cleanstyle</h3>
-        <ul>
-          <% sns.forEach(function(item){ %>
-          <li>
-            <a href="#" class="p-footer__box">
-              <img
-                src="./assets/images/icons/<%= item.title %>.svg"
-                alt="<%= item.title %> "
-              />
-              <p class="p-footer__text">
-              <%= item.title %>
-              </p>
-            </a>
-          </li>
-          <% }) %>
-        </ul>
+        <div class="p-footer__info">
+          <h3 class="p-footer__name">コバヤシ<span class="u-mr-20"></span>ショウゴ</h3>
+          <h3 class="p-footer__company font-XANO">株式会社cleanstyle</h3>
+        </div>
+        <div class="p-footer__link">
+          <ul>
+            <% sns.forEach(function(item){ %>
+            <li>
+              <a href="#" class="p-footer__box">
+                <img
+                  src="./assets/images/icons/<%= item.title %>.svg"
+                  alt="<%= item.title %> "
+                />
+                <p class="p-footer__text">
+                <%= item.title %>
+                </p>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>

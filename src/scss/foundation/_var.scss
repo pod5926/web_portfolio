@@ -9,7 +9,7 @@ $breakpoints: (
   'o-pc': 'print, screen and (min-width: #{$breakPC + 1}px)',
 ) !default;
 
-@mixin mq($breakpoint) {
+@mixin mq($breakpoint: u-sp) {
   @media #{inspect(map-get($breakpoints, $breakpoint))} {
     @content;
   }

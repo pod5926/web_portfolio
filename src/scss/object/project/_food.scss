@@ -8,13 +8,22 @@
     background: url('#{$bgPath}sushi-ball.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
+
+    @include mq {
+      background-attachment: inherit;
+    }
   }
 
   &__img {
-    height: 100%;
+    height: 40vh;
     width: 50%;
     object-fit: cover;
     border: 1px solid $colorBlack;
+
+    @include mq {
+      width: 100%;
+      margin-bottom: 50px;
+    }
   }
 
   &__content {
@@ -23,9 +32,18 @@
     align-items: center;
     margin: auto;
     width: 50%;
-    height: 90%;
+    height: 40vh;
     writing-mode: vertical-rl;
     text-orientation: upright;
+
+    @include mq {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__box {
+    height: 90%;
   }
 
   &__title {
@@ -43,10 +61,14 @@
     & > li {
       display: flex;
       justify-content: space-between;
-      height: 300px;
+      flex-wrap: wrap;
 
       &:nth-of-type(n + 2) {
         opacity: 0.4;
+
+        @include mq {
+          opacity: 1;
+        }
       }
 
       &:nth-of-type(2n) {

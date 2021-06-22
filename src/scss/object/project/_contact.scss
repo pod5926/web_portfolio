@@ -8,6 +8,10 @@
     background: url('#{$bgPath}yado.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
+
+    @include mq {
+      background-attachment: inherit;
+    }
   }
 
   &__area {
@@ -24,6 +28,10 @@
     width: 50%;
     height: 50vh;
     background: $colorKon;
+
+    @include mq {
+      width: 100%;
+    }
   }
 
   &__textBlock {
@@ -32,6 +40,11 @@
     align-items: center;
     width: 50%;
     text-align: center;
+
+    @include mq {
+      padding: 40px 20px;
+      width: 100%;
+    }
   }
 
   &__title {

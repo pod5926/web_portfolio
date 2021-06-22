@@ -8,6 +8,11 @@
   letter-spacing: 0.1em;
   overflow: hidden;
   word-break: break-word;
+
+  @include mq {
+    position: relative;
+    padding: 0;
+  }
 }
 
 /*bodyにappearクラスがついたら出現*/
