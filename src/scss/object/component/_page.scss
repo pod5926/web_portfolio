@@ -1,0 +1,145 @@
+.c-pageTop {
+  position: fixed;
+  right: 10px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(100px);
+
+  & > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: $colorGray;
+    border: 1px solid $colorGray;
+    transition: all 0.3s;
+
+    &:hover {
+      background: $colorKon;
+    }
+
+    & > span {
+      position: relative;
+      top: -10px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -3px;
+        background: $colorGray;
+        width: 1px;
+        height: 30px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: -7px;
+        background: $colorGray;
+        width: 1px;
+        height: 20px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &.upMove {
+    animation: upAnime 0.5s forwards;
+  }
+
+  &.downMove {
+    animation: downAnime 0.5s forwards;
+  }
+}
+
+@keyframes upAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+/*===========================================================*/
+/* 機能編 8-1-6　ページの指定の高さを超えたら出現し、フッター手前で止まる*/
+/*===========================================================*/
+
+// /*リンクの形状*/
+// #page-top a{
+// 	display: flex;
+// 	justify-content:center;
+// 	align-items:center;
+// 	width: 60px;
+// 	height: 60px;
+// 	color: #6C6C6C;
+//     border:1px solid #6C6C6C;
+// 	transition:all 0.3s;
+// }
+
+// @media screen and (min-width:769px) {
+// #page-top a:hover{
+// 	background: #777;
+// }
+// }
+
+// /*リンクを右下に固定*/
+// #page-top {
+// 	position: fixed;
+// 	right: 10px;
+// 	z-index: 2;
+// 	cursor: pointer;
+//     /*はじめは非表示*/
+// 	opacity: 0;
+// 	transform: translateY(100px);
+// }
+
+// /*　上に上がる動き　*/
+
+// #page-top.UpMove{
+// 	animation: UpAnime 0.5s forwards;
+// 	animation-delay:0s;
+// }
+// @keyframes UpAnime{
+//   from {
+//     opacity: 0;
+// 	transform: translateY(100px);
+//   }
+//   to {
+//     opacity: 1;
+// 	transform: translateY(0);
+//   }
+// }
+
+// /*　下に下がる動き　*/
+
+// #page-top.DownMove{
+// 	animation: DownAnime 0.5s forwards;
+// }
+// @keyframes DownAnime{
+//   from {
+//   	opacity: 1;
+// 	transform: translateY(0);
+//   }
+//   to {
+//   	opacity: 1;
+// 	transform: translateY(100px);
+//   }
+// }

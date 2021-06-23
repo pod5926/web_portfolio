@@ -2,6 +2,7 @@ import $ from 'jquery'
 import {moveSlide} from '../modules/Slider';
 import {fadeAnime,fadeTitle} from '../modules/Fade';
 import {progressbar} from '../modules/ProgressBar';
+import {scrollTop} from '../modules/Scroll';
 
 export default class Home {
   constructor() {
@@ -39,4 +40,5 @@ $(window).on('load', () => {
 // scroll時発火
 $(window).on('scroll', () => {
   fadeAnime();
+  scrollTop();
 });
