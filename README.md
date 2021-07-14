@@ -6,7 +6,11 @@
 
 ## 使用技術
 
-HTML、EJS、SCSS、JS、jQuery
+- HTML
+- EJS
+- SCSS
+- JavaScript
+- jQuery
 
 ## 機能、非機能一覧
 
