@@ -2,8 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  height: 60vh;
+  padding: 10px;
+  height: 500px;
+
+  @include mq {
+    height: 300px;
+  }
 
   &__info {
     letter-spacing: 0.2em;
@@ -15,11 +19,18 @@
   &__title {
     font-size: 3.5rem;
     font-weight: bold;
+    @include mq {
+      font-size: 3rem;
+    }
   }
 
   &__text {
     height: 13em;
     margin-right: 20px;
     font-size: 2rem;
+    @include mq {
+      height: 11em;
+      font-size: 1.5rem;
+    }
   }
 }
