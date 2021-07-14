@@ -1,10 +1,19 @@
-# static
+# フロントサンプル
 
-## 使用言語
+フロント技術向上のためサンプルページを作成
+
+<img width="1440" alt="スクリーンショット 2021-07-14 17 29 49" src="https://user-images.githubusercontent.com/59504568/125590158-9aca438b-2569-4934-a785-b8c4880dcae5.png">
+
+## 使用技術
 
 HTML、EJS、SCSS、JS、jQuery
 
-## 使用コマンド
+## 機能、非機能一覧
+
+- ProgressBar.js
+  - ローディング実装
+- slick
+  - スライドショーの実装
 
 ### モジュールインストール
 
